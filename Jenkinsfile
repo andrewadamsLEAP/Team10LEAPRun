@@ -43,4 +43,4 @@ pipeline {
             echo "Build ${env.BUILD_NUMBER} failed on branch ${env.BRANCH_NAME}."
         }
     }
-}~
+}
