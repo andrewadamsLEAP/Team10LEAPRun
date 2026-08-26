@@ -1,27 +1,46 @@
-node {
-    stage('Preparation') {
-        git branch: 'main',
-            url: 'https://github.com/andrewadamsLEAP/Team10LEAPRunBack.git'
+pipeline {
+    agent any
 
-        echo 'Preparing.'
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+
+                echo "Building branch: ${env.BRANCH_NAME}"
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building.'
+
+                sh 'mvn clean package -DskipTests'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Testing.'
+
+                sh 'mvn test'
+            }
+
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
     }
 
-    stage('Build') {
-        echo 'Building.'
-        sh 'mvn clean package -DskipTests'
-    }
+    post {
+        success {
+            echo "Build ${env.BUILD_NUMBER} passed on branch ${env.BRANCH_NAME}."
+        }
 
-    stage('Test') {
-        echo 'Testing.'
-        sh 'mvn test'
+        failure {
+            echo "Build ${env.BUILD_NUMBER} failed on branch ${env.BRANCH_NAME}."
+        }
     }
-
-    stage('Results') {
-        echo 'Gathering Results.'
-        junit allowEmptyResults: true,
-              testResults: 'target/surefire-reports/TEST-*.xml'
-
-        archiveArtifacts artifacts: 'target/*.jar',
-                         fingerprint: true
-    }
-}
+}~
