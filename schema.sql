@@ -25,6 +25,7 @@ CREATE TABLE instruments (
     country VARCHAR(100),
     asset_type VARCHAR(50) NOT NULL
 );
+
 CREATE TABLE client(
 client_id BIGSERIAL PRIMARY KEY,
 email VARCHAR(255) NOT NULL UNIQUE,
@@ -33,4 +34,18 @@ password VARCHAR(255) NOT NULL,
 first_name VARCHAR(100) NOT NULL,
 last_name VARCHAR(100) NOT NULL,
 cash_amount NUMERIC(15,2) NOT NULL DEFAULT 0.00
+);
+
+CREATE TABLE orders (
+order_id UUID PRIMARY KEY,
+ticker VARCHAR(100) NOT NULL,
+client_id BIGINT NOT NULL,
+order_type VARCHAR(10) NOT NULL,
+price DECIMAL(18,2) NOT NULL,
+quantity DECIMAL (18,8) NOT NULL,
+date DECIMAL (18,6) NOT NULL,
+FOREIGN KEY (ticker)
+	REFERENCES instruments(ticker),
+FOREIGN KEY (client_id)
+	REFERENCES client(client_id)
 );
