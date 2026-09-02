@@ -15,3 +15,13 @@ CREATE TABLE reporter (
 	first_name VARCHAR(255) NOT NULL,
 	last_name VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE instruments (
+    ticker VARCHAR(100) PRIMARY KEY,
+    previous_close float8 NOT NULL,
+    open float8 NOT NULL,
+    volume integer NOT NULL,
+    avg_volume float8 NOT NULL,
+    country VARCHAR(100),
+    asset_type VARCHAR(50) NOT NULL
+);
