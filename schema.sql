@@ -39,4 +39,4 @@ FOREIGN KEY (ticker)
 	REFERENCES instruments(ticker),
 FOREIGN KEY (client_id)
 	REFERENCES client(client_id)
-)
+);
