@@ -25,3 +25,12 @@ CREATE TABLE instruments (
     country VARCHAR(100),
     asset_type VARCHAR(50) NOT NULL
 );
+CREATE TABLE client(
+client_id BIGSERIAL PRIMARY KEY,
+email VARCHAR(255) NOT NULL UNIQUE,
+username VARCHAR(100) NOT NULL UNIQUE,
+password VARCHAR(255) NOT NULL,
+first_name VARCHAR(100) NOT NULL,
+last_name VARCHAR(100) NOT NULL,
+cash_amount NUMERIC(15,2) NOT NULL DEFAULT 0.00
+);
