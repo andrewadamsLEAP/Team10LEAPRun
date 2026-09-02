@@ -25,3 +25,14 @@ CREATE TABLE instruments (
     country VARCHAR(100),
     asset_type VARCHAR(50) NOT NULL
 );
+
+CREATE TABLE orders (
+order_id UUID PRIMARY KEY,
+ticker VARCHAR(100) NOT NULL,
+order_type VARCHAR(10) NOT NULL,
+price DECIMAL(18,2) NOT NULL,
+quantity DECIMAL (18,8) NOT NULL,
+date DECIMAL (18,6) NOT NULL,
+FOREIGN KEY (ticker)
+	REFERENCES instruments(ticker)
+)
