@@ -50,12 +50,12 @@ ticker VARCHAR(100) NOT NULL,
 client_id BIGINT NOT NULL,
 order_type VARCHAR(10) NOT NULL,
 order_status VARCHAR(20) NOT NULL DEFAULT 'PENDING',
-price DECIMAL(18,2) NOT NULL,
-quantity DECIMAL (18,8) NOT NULL,
+price NUMERIC(18,2) NOT NULL,
+quantity INTEGER NOT NULL,
 order_date TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
 FOREIGN KEY (ticker)
 	REFERENCES instruments(ticker),
 FOREIGN KEY (client_id)
 	REFERENCES client(client_id)
-
 );
+
