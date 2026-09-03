@@ -59,3 +59,25 @@ FOREIGN KEY (client_id)
 	REFERENCES client(client_id)
 );
 
+CREATE TABLE holdings (
+    hold_id BIGSERIAL NOT NULL PRIMARY KEY,
+    client_id BIGINT NOT NULL,
+    ticker VARCHAR(100) NOT NULL,
+    quantity INTEGER NOT NULL,
+
+    CONSTRAINT fk_client
+        FOREIGN KEY (client_id)
+        REFERENCES client (client_id)
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_ticker
+        FOREIGN KEY (ticker)
+        REFERENCES instruments (ticker)
+        ON DELETE CASCADE,
+
+    CONSTRAINT chk_quantity_positive
+        CHECK (quantity > 0),
+
+    CONSTRAINT uq_client_ticker
+        UNIQUE (client_id, ticker)
+);
