@@ -22,7 +22,7 @@ INSERT INTO reporter (email, username, password, first_name, last_name) VALUES
 ('reporter9@example.com', 'rep_svance', 'Slate-Hollow05', 'Sarah', 'Vance'),
 ('reporter10@example.com', 'rep_rclark', 'Rustic!Beacon40', 'Ryan', 'Clark');
 
-INSERT INTO price (ticker, price, timestamp) VALUES
+INSERT INTO prices (ticker, price, timestamp) VALUES
 ('AAPL',  229.450000, '2026-08-31 14:00:00+00'),
 ('AAPL',  230.120000, '2026-08-31 15:00:00+00'),
 ('AAPL',  228.970000, '2026-08-31 16:00:00+00'),
@@ -59,3 +59,17 @@ INSERT INTO instruments (ticker, previous_close, open, volume, avg_volume, asset
 ('SOL-USD',    198.450000,    201.120000,  845600,  912000, 'CRYPTO'),
 ('XRP-USD',      2.840000,      2.910000, 1254300, 1345000, 'CRYPTO'),
 ('ADA-USD',      0.842000,      0.856000,  634200,  701000, 'CRYPTO');
+
+INSERT INTO client (email, username, password, first_name, last_name, cash_amount)
+VALUES
+('client@gmail.com' , 'leap', 'password','nathan' , 'kevin' , 150.00), 
+('aoife.murphy@gmail.com', 'aoife_m', 'hash_aoife', 'Aoife', 'Murphy', 120.00),
+('sean.ryan@gmail.com', 'sean_r', 'hash_sean', 'Seán', 'Ryan', 75.50),
+('niamh.byrne@gmail.com', 'niamh_b', 'hash_niamh', 'Niamh', 'Byrne', 300.00),
+('cian.walsh@gmail.com', 'cian_w', 'hash_cian', 'Cian', 'Walsh', 0.00),
+('orla.kelly@gmail.com', 'orla_k', 'hash_orla', 'Orla', 'Kelly', 9999.99),
+('patrick.dunne@gmail.com', 'patrick_d', 'hash_patrick', 'Patrick', 'Dunne', 55.25),
+('sinead.oconnor@gmail.com', 'sinead_o', 'hash_sinead', 'Sinéad', 'Connor', 480.10),
+('liam.brennan@gmail.com', 'liam_b', 'hash_liam', 'Liam', 'Brennan', 12.00),
+('emma.carroll@gmail.com', 'emma_c', 'hash_emma', 'Emma', 'Carroll', 760.00),
+('jack.higgins@gmail.com', 'jack_h', 'hash_jack', 'Jack', 'Higgins', 5.75);
