@@ -51,6 +51,7 @@ INSERT INTO instruments (ticker, previous_close, open, volume, avg_volume, count
 ('NVDA',  183.920000, 181.340000, 156432000, 168750000, 'USA', 'Stock');
 INSERT INTO client (email, username, password, first_name, last_name, cash_amount)
 VALUES
+('client@gmail.com' , 'leap', 'password','nathan' , 'kevin' , 150.00), 
 ('aoife.murphy@gmail.com', 'aoife_m', 'hash_aoife', 'Aoife', 'Murphy', 120.00),
 ('sean.ryan@gmail.com', 'sean_r', 'hash_sean', 'Seán', 'Ryan', 75.50),
 ('niamh.byrne@gmail.com', 'niamh_b', 'hash_niamh', 'Niamh', 'Byrne', 300.00),
