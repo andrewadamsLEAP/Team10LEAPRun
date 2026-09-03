@@ -22,8 +22,9 @@ CREATE TABLE instruments (
     open float8 NOT NULL,
     volume integer NOT NULL,
     avg_volume float8 NOT NULL,
-    country VARCHAR(100),
-    asset_type VARCHAR(50) NOT NULL
+    asset_type VARCHAR(50) NOT NULL,
+    CONSTRAINT chk_asset_type
+	CHECK (asset_type IN ('STOCK', 'FOREX', 'CRYPTO'));
 );
 
 CREATE TABLE client(
