@@ -34,3 +34,11 @@ first_name VARCHAR(100) NOT NULL,
 last_name VARCHAR(100) NOT NULL,
 cash_amount NUMERIC(15,2) NOT NULL DEFAULT 0.00
 );
+
+CREATE TABLE transaction(
+transaction_id BIGSERIAL PRIMARY KEY,
+client_id BIGINT NOT NULL REFERENCES client(client_id),
+withdrawal NUMERIC(15,2) NOT NULL DEFAULT 0.00 CHECK (withdrawal >= 0),
+deposit NUMERIC(15,2) NOT NULL DEFAULT 0.00 CHECK (deposit >= 0),
+created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
