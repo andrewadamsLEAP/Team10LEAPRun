@@ -22,11 +22,7 @@ INSERT INTO reporter (email, username, password, first_name, last_name) VALUES
 ('reporter9@example.com', 'rep_svance', 'Slate-Hollow05', 'Sarah', 'Vance'),
 ('reporter10@example.com', 'rep_rclark', 'Rustic!Beacon40', 'Ryan', 'Clark');
 
-<<<<<<< HEAD
 INSERT INTO prices (ticker, price, timestamp) VALUES
-=======
-INSERT INTO price (ticker, price, timestamp) VALUES
->>>>>>> 94e5f4f3a8eefc0b4570013992d6acdd506c0078
 ('AAPL',  229.450000, '2026-08-31 14:00:00+00'),
 ('AAPL',  230.120000, '2026-08-31 15:00:00+00'),
 ('AAPL',  228.970000, '2026-08-31 16:00:00+00'),
@@ -46,7 +42,6 @@ INSERT INTO price (ticker, price, timestamp) VALUES
 ('NVDA',  184.670000, '2026-08-31 15:00:00+00'),
 ('NVDA',  183.920000, '2026-08-31 16:00:00+00');
 
-<<<<<<< HEAD
 INSERT INTO instruments (ticker, previous_close, open, volume, avg_volume, asset_type) VALUES
 ('AAPL',  228.970000, 229.450000, 58432100, 61245000, 'STOCK'),
 ('MSFT',  512.430000, 511.250000, 21345800, 22134000, 'STOCK'),
@@ -78,15 +73,6 @@ VALUES
 ('liam.brennan@gmail.com', 'liam_b', 'hash_liam', 'Liam', 'Brennan', 12.00),
 ('emma.carroll@gmail.com', 'emma_c', 'hash_emma', 'Emma', 'Carroll', 760.00),
 ('jack.higgins@gmail.com', 'jack_h', 'hash_jack', 'Jack', 'Higgins', 5.75);
-=======
-INSERT INTO instruments (ticker, previous_close, open, volume, avg_volume, country, asset_type) VALUES
-('AAPL',  228.970000, 229.450000, 58432100, 61245000, 'USA', 'Stock'),
-('MSFT',  512.430000, 511.250000, 21345800, 22134000, 'USA', 'Stock'),
-('GOOGL', 188.430000, 187.650000, 19342100, 20125000, 'USA', 'Stock'),
-('AMZN',  232.190000, 231.780000, 38765400, 41234000, 'USA', 'Stock'),
-('TSLA',  345.430000, 342.120000, 92134500, 98456000, 'USA', 'Stock'),
-('NVDA',  183.920000, 181.340000, 156432000, 168750000, 'USA', 'Stock');
->>>>>>> 94e5f4f3a8eefc0b4570013992d6acdd506c0078
 
 INSERT INTO orders (ticker, client_id, order_type, order_status, price, quantity) VALUES
 ('AAPL', 1, 'BUY', 'FULFILLED', 225.50, 10),
@@ -98,8 +84,4 @@ INSERT INTO orders (ticker, client_id, order_type, order_status, price, quantity
 ('MSFT', 3, 'BUY', 'FULFILLED', 225.50, 10),
 ('TSLA', 4, 'BUY', 'CANCELLED', 225.50, 10),
 ('BTC', 1, 'SELL', 'FULFILLED', 225.50, 10),
-<<<<<<< HEAD
 ('ETH', 2, 'BUY', 'PENDING', 225.50, 10);
-=======
-('ETH', 2, 'BUY', 'PENDING', 225.50, 10),
->>>>>>> 94e5f4f3a8eefc0b4570013992d6acdd506c0078
