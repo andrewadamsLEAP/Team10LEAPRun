@@ -73,3 +73,15 @@ VALUES
 ('liam.brennan@gmail.com', 'liam_b', 'hash_liam', 'Liam', 'Brennan', 12.00),
 ('emma.carroll@gmail.com', 'emma_c', 'hash_emma', 'Emma', 'Carroll', 760.00),
 ('jack.higgins@gmail.com', 'jack_h', 'hash_jack', 'Jack', 'Higgins', 5.75);
+
+INSERT INTO orders (ticker, client_id, order_type, order_status, price, quantity) VALUES
+('AAPL', 1, 'BUY', 'FULFILLED', 225.50, 10),
+('MSFT', 2, 'BUY', 'PENDING', 510.75, 5),
+('TSLA', 1, 'SELL', 'FULFILLED', 225.50, 10),
+('BTC', 3, 'BUY', 'PENDING', 225.50, 10),
+('ETH', 4, 'BUY', 'CANCELLED', 225.50, 10),
+('AAPL', 2, 'SELL', 'PENDING', 225.50, 10),
+('MSFT', 3, 'BUY', 'FULFILLED', 225.50, 10),
+('TSLA', 4, 'BUY', 'CANCELLED', 225.50, 10),
+('BTC', 1, 'SELL', 'FULFILLED', 225.50, 10),
+('ETH', 2, 'BUY', 'PENDING', 225.50, 10);
