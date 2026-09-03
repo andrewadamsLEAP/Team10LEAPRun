@@ -64,6 +64,7 @@ CREATE TABLE holdings (
     client_id BIGINT NOT NULL,
     ticker VARCHAR(100) NOT NULL,
     quantity INTEGER NOT NULL,
+    upadted_at DATE NOT NULL,
 
     CONSTRAINT fk_client
         FOREIGN KEY (client_id)
